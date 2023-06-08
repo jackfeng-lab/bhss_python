@@ -3711,3 +3711,22 @@ Event_DemEvent_LKA_MAX,N/A,LaneKeepAssistAngleCtrlMain
 Event_DemEvent_LKA_OVER_RIDE,N/A,LaneKeepAssistAngleCtrlMain
 Event_DemEvent_LKA_OVER_SPEEO,N/A,LaneKeepAssistAngleCtrlMain
 WdgMonI_RunnCPR,WdgMMonitor,LaneKeepAssistAngleCtrlMain
+,,
+Table: OEMConfigure Dependency,,
+Interface,Sender/Server,Receiver/Client
+sActDampQMAndEndState,OEMConfigure,ActiveDamping
+sActRetQMAndEndState,OEMConfigure,ActiveReturn
+sEndStopQMAndEndState,OEMConfigure,EndStop
+sFriCompQMAndEndState,OEMConfigure,FrictionCompensation
+sRackPositionAutoAssignmentEnable,OEMConfigure,RackPosition
+sVehSpdDQMAndEndState,OEMConfigure,VehicleSpeedMain
+,,
+Table: TrqEst Dependency,,
+Interface,Sender/Server,Receiver/Client
+mMotCtrl_TrqEst,TrqEst,MotPlausi|MotTemp
+fMotCtrl_INTRunFlag,SigTfr,TrqEst
+iMotCtrl_CurU,SigTfr,TrqEst
+iMotCtrl_CurV,SigTfr,TrqEst
+wMotCtrl_EleAngleFOC,SigTfr,TrqEst
+Event_DemEvent_FOCTorqueFailed,N/A,TrqEst
+WdgMonI_RunnCPR,WdgMMonitor,TrqEst
